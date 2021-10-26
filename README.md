@@ -90,8 +90,8 @@ Allows users to create Rooms with their house/roommates to assign and keep track
   * Task   
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+<img src="https://raw.githubusercontent.com/Sambusane/495_Roomies/main/IMG_0059.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
