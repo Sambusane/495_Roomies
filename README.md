@@ -11,7 +11,7 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Allows users to create Rooms with their house/roommates to assign and keep track of completion of household tasks.]
+Allows users to create Rooms with their house/roommates to assign and keep track of completion of household tasks.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
@@ -28,39 +28,66 @@ Original App Design Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Users can create an account
+* Users can login
+* Users can see a list of all tasks assigned to them
+* Users can see a list of rooms they are in
+* Users can create a room
+* Users can add other users to the room
+* Users can create tasks in the room
+* Users can assign tasks in the room
+* Users can mark a task complete
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Users can delete a room
+* Users can see how many tasks they have completed 
+* Users can add personal tasks without creating a room
+* Users can post comments in the room
+* Users can message other users
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login
+   * Users can login 
+* Register
+   * Users can create an account
+* Stream
+   * Users can see a list of all tasks assigned to them
+   * Users can mark a task complete
+* Rooms
+   * Users can see a list of rooms they are in
+   * Users can create a room
+* Room
+   * Users can add other users to a room
+   * Users can create tasks in the room
+   * Users can assign tasks to others users
+   * Users can mark a task complete
+* Task
+   * Users can create a task
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Stream
+* Rooms
+
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login
+   * Stream
+   * Register
+* Register
+   * Stream
+* Stream
+  * Task
+  * Rooms
+* Rooms
+  * Room
+* Room
+  * Task   
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
