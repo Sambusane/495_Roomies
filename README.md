@@ -15,11 +15,11 @@ Allows users to create Rooms with their house/roommates to assign and keep track
 - **Category:** Household/Organizational
 - **Mobile:** iPhone app, Mobile first experience
 - **Story:** Users can keep track of chores in shared spaces. Giving them a convient way to keep a list of tasks that 
--            they have access to as long as they have a phone. 
+             they have access to as long as they have a phone. 
 - **Market:** College students, renters, families, office workers
 - **Habit:** users can create tasks as the chores arise, so multiple times a day
 - **Scope:** Allowing users to just keep track of tasks but would like to expand to messaging and commenting options 
--            among users.
+             among users.
 
 ## Product Spec
 
