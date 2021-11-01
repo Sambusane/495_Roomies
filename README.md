@@ -98,22 +98,22 @@ Allows users to create Rooms with their house/roommates to assign and keep track
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-Users:
-	userId: String, unique ID for each user that is created
-	Username: String, a unique identifier chosen by the user
-	Rooms: List, a list of roomIDs that the user has been assigned to
-	Password: String, a password created by the user 
-Rooms:
-	roomID: String, a unique identifier for each room created
-	Roomname: String, a non unique identifier for the room created by the user
-	Tasks: List, a list of tasks created for that room
-	Users: List, all users assigned to a room
-Tasks:
-	TaskID: string, a unique identifier generated for each task
-	Taskname:string,  a non unique identifier given by the user
-	Description: string, a description of the task given by the user
-	createrID: string, the id of the user who created the task
-	assignID: string, the id of the user assigned to the task
+* Users:
+	* userId: String, unique ID for each user that is created
+	* Username: String, a unique identifier chosen by the user
+	* Rooms: List, a list of roomIDs that the user has been assigned to
+	* Password: String, a password created by the user 
+* Rooms:
+	* roomID: String, a unique identifier for each room created
+	* Roomname: String, a non unique identifier for the room created by the user
+	* Tasks: List, a list of tasks created for that room
+	* Users: List, all users assigned to a room
+* Tasks:
+	* TaskID: string, a unique identifier generated for each task
+	* Taskname:string,  a non unique identifier given by the user
+	* Description: string, a description of the task given by the user
+	* createrID: string, the id of the user who created the task
+	* assignID: string, the id of the user assigned to the task
 
 ### Networking
 - Login Screen
