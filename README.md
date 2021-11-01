@@ -98,8 +98,135 @@ Allows users to create Rooms with their house/roommates to assign and keep track
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+Users:
+	userId: String, unique ID for each user that is created
+	Username: String, a unique identifier chosen by the user
+	Rooms: List, a list of roomIDs that the user has been assigned to
+	Password: String, a password created by the user 
+Rooms:
+	roomID: String, a unique identifier for each room created
+	Roomname: String, a non unique identifier for the room created by the user
+	Tasks: List, a list of tasks created for that room
+	Users: List, all users assigned to a room
+Tasks:
+	TaskID: string, a unique identifier generated for each task
+	Taskname:string,  a non unique identifier given by the user
+	Description: string, a description of the task given by the user
+	createrID: string, the id of the user who created the task
+	assignID: string, the id of the user assigned to the task
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Login Screen
+(Read/GET) Query logged in user object
+let query = PFQuery(className:"User")
+query.whereKey("id", equalTo: currentUser)
+var user = [PFObject]?
+   if let error = error {
+      print(error.localizedDescription)
+   } else if let user =  {
+      print("Successfully retrieved \(user) ")
+      // TODO: Do something with users...
+   }
+}
+- Register Screen
+(Create/OBJECT) Create a new user object
+let newUser = PFUser()   
+    // set user properties
+    newUser.username = usernameField.text
+    newUser.email = emailField.text
+    newUser.password = passwordField.text
+    // call sign up function on the object
+    newUser.signUpInBackground { (success: Bool, error: Error?) in
+        if let error = error {
+            print(error.localizedDescription)
+        } else {
+            print("User Registered successfully")
+            // manually segue to logged in view
+        }
+    }
+}
+- Stream Screen
+let query = PFQuery(className:"Task")
+query.order(byDescending: "createdAt")
+query.findObjectsInBackground { (tasks: [PFObject]?, error: Error?) in
+   if let error = error {
+      print(error.localizedDescription)
+   } else if let tasks = tasks {
+      print("Successfully retrieved \(tasks.count) tasks.")
+      // TODO: Do something with posts...
+   }
+}
+(Read/GET) Query existing task object(s)
+- Rooms Home Screen
+let query = PFQuery(className:"Room")
+query.order(byDescending: "createdAt")
+query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+   if let error = error {
+      print(error.localizedDescription)
+   } else if let rooms = rooms {
+      print("Successfully retrieved \(rooms.count) rooms.")
+      // TODO: Do something with rooms...
+   }
+}
+(Read/GET) Query existing room object(s)
+- Create Room Screen
+(Create/OBJECT) Create a new room object
+let newRoom = PFUser()   
+    // set room properties
+    newUser.roomName = roomnameField.text
+    // call room creation on object
+    newUser.signUpInBackground { (success: Bool, error: Error?) in
+        if let error = error {
+            print(error.localizedDescription)
+        } else {
+            print("Room created successfully")
+            // manually segue to rooms view
+        }
+    }
+}
+- Individual Room Home Screen
+
+let query = PFQuery(className:"Rooms")
+query.whereKey("id", equalTo: currentUser)
+query.order(byDescending: "createdAt")
+query.findObjectsInBackground { (rooms: [PFObject]?, error: Error?) in
+   if let error = error {
+      print(error.localizedDescription)
+   } else if let rooms = rooms {
+      print("Successfully retrieved \(posts.count) posts.")
+      // TODO: Do something with posts...
+   }
+}
+(Read/GET) Query existing task object(s) for user-selected room
+
+- Add People Screen
+let query = PFQuery(className:"User")
+query.whereKey("id", equalTo: currentUser)
+var user = [PFObject]?
+   if let error = error {
+      print(error.localizedDescription)
+   } else if let user =  {
+      print("Successfully retrieved \(user) ")
+      // TODO: Do something with users...
+   }
+}
+(Read/GET) Query existing user object(s) for user-selected room
+- Add Task Screen
+let newTask = PFObject()   
+    // set task properties
+    newTask.name = nameField.text
+    newTask.description = descriptionField.text
+    // call task creation on the object
+    newTask.createInBackground { (success: Bool, error: Error?) in
+        if let error = error {
+            print(error.localizedDescription)
+        } else {
+            print("Task created successfully")
+            // manually segue to individual room view
+        }
+    }
+}
+(Create/OBJECT) Create a new task object
+- Task Screen
+(Read/GET) Query user-selected task object
+
