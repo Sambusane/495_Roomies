@@ -28,7 +28,11 @@ Allows users to create Rooms with their house/roommates to assign and keep track
 **Required Must-have Stories**
 
 * Users can create an account
+    * ![](https://i.imgur.com/9ccHAqp.gif)
+
 * Users can login
+    * ![](https://i.imgur.com/Z0uyhBU.gif)
+
 * Users can see a list of all tasks assigned to them
 * Users can see a list of rooms they are in
 * Users can create a room
