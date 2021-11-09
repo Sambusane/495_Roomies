@@ -73,8 +73,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordField" destination="8Uu-Ur-h5e" id="ibZ-5t-C5A"/>
-                        <outlet property="usernameField" destination="UvT-wd-jhy" id="gNW-BI-1yj"/>
+                        <outlet property="passwordField" destination="8Uu-Ur-h5e" id="eSb-lo-tPG"/>
+                        <outlet property="usernameField" destination="UvT-wd-jhy" id="8Ok-4N-vfg"/>
                         <segue destination="icy-JB-f89" kind="presentation" identifier="loginSegue" id="wGd-jD-FDn"/>
                     </connections>
                 </viewController>
