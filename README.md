@@ -36,6 +36,8 @@ Allows users to create Rooms with their house/roommates to assign and keep track
 * Users can see a list of all tasks assigned to them
 * Users can see a list of rooms they are in
 * Users can create a room
+   * Previous 3 stories in this gif 
+	<img src='https://github.com/Sambusane/495_Roomies/blob/main/Roomies/Roomies/Milestone2Roomies.gif?raw=true' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 * Users can add other users to the room
 * Users can create tasks in the room
 * Users can assign tasks in the room

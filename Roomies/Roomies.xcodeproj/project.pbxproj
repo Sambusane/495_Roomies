@@ -12,6 +12,7 @@
 		20B4B49D27435CFD0022A54F /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4B49C27435CFD0022A54F /* RoomsViewController.swift */; };
 		20B4B49F27435E250022A54F /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4B49E27435E250022A54F /* CreateRoomViewController.swift */; };
 		20B4B4A1274361E10022A54F /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4B4A0274361E10022A54F /* RoomCell.swift */; };
+		22045EF7274393CC00765D12 /* Milestone2Roomies.gif in Resources */ = {isa = PBXBuildFile; fileRef = 22045EF6274393CB00765D12 /* Milestone2Roomies.gif */; };
 		22A203572727A03D005D5151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A203562727A03D005D5151 /* AppDelegate.swift */; };
 		22A203592727A03D005D5151 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A203582727A03D005D5151 /* SceneDelegate.swift */; };
 		22A2035B2727A03D005D5151 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2035A2727A03D005D5151 /* ViewController.swift */; };
@@ -21,6 +22,8 @@
 		22A2036E2727A03E005D5151 /* RoomiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2036D2727A03E005D5151 /* RoomiesTests.swift */; };
 		22A203792727A03E005D5151 /* RoomiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A203782727A03E005D5151 /* RoomiesUITests.swift */; };
 		22C3F1F4273630ED0018AB2F /* TaskFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F1F3273630ED0018AB2F /* TaskFeedController.swift */; };
+		22C707BF27437A0100EFDECC /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C707BE27437A0100EFDECC /* CreateTaskViewController.swift */; };
+		22C707C127437D9200EFDECC /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C707C027437D9200EFDECC /* TaskTableViewController.swift */; };
 		3E8D7852EA7DE27A023400A0 /* Pods_Roomies_RoomiesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1405A4158A161F1FD980265D /* Pods_Roomies_RoomiesUITests.framework */; };
 		D524499327438915006118E9 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D524499227438915006118E9 /* TaskViewController.swift */; };
 		D5244995274395FF006118E9 /* listTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5244994274395FF006118E9 /* listTableViewCell.swift */; };
@@ -50,6 +53,7 @@
 		20B4B49C27435CFD0022A54F /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		20B4B49E27435E250022A54F /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		20B4B4A0274361E10022A54F /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		22045EF6274393CB00765D12 /* Milestone2Roomies.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Milestone2Roomies.gif; sourceTree = "<group>"; };
 		22A203532727A03D005D5151 /* Roomies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A203562727A03D005D5151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22A203582727A03D005D5151 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 		22A203782727A03E005D5151 /* RoomiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomiesUITests.swift; sourceTree = "<group>"; };
 		22A2037A2727A03E005D5151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C3F1F3273630ED0018AB2F /* TaskFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFeedController.swift; sourceTree = "<group>"; };
+		22C707BE27437A0100EFDECC /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		22C707C027437D9200EFDECC /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		3276DA44B4415042E3E52353 /* Pods-Roomies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomies.debug.xcconfig"; path = "Target Support Files/Pods-Roomies/Pods-Roomies.debug.xcconfig"; sourceTree = "<group>"; };
 		5835C002E3B4313C821CF603 /* Pods-Roomies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomies.release.xcconfig"; path = "Target Support Files/Pods-Roomies/Pods-Roomies.release.xcconfig"; sourceTree = "<group>"; };
 		6D817364775FCF5688EA7947 /* Pods-Roomies-RoomiesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomies-RoomiesUITests.debug.xcconfig"; path = "Target Support Files/Pods-Roomies-RoomiesUITests/Pods-Roomies-RoomiesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 		22A2034A2727A03C005D5151 = {
 			isa = PBXGroup;
 			children = (
+				22C707C027437D9200EFDECC /* TaskTableViewController.swift */,
 				22A203552727A03D005D5151 /* Roomies */,
 				22A2036C2727A03E005D5151 /* RoomiesTests */,
 				22A203772727A03E005D5151 /* RoomiesUITests */,
@@ -141,10 +148,12 @@
 		22A203552727A03D005D5151 /* Roomies */ = {
 			isa = PBXGroup;
 			children = (
+				22045EF6274393CB00765D12 /* Milestone2Roomies.gif */,
 				22A203562727A03D005D5151 /* AppDelegate.swift */,
 				22A203582727A03D005D5151 /* SceneDelegate.swift */,
 				22A2035A2727A03D005D5151 /* ViewController.swift */,
 				22A2035C2727A03D005D5151 /* Main.storyboard */,
+				22C707BE27437A0100EFDECC /* CreateTaskViewController.swift */,
 				22C3F1F3273630ED0018AB2F /* TaskFeedController.swift */,
 				22A2035F2727A03E005D5151 /* Assets.xcassets */,
 				22A203612727A03E005D5151 /* LaunchScreen.storyboard */,
@@ -295,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A203632727A03E005D5151 /* LaunchScreen.storyboard in Resources */,
+				22045EF7274393CC00765D12 /* Milestone2Roomies.gif in Resources */,
 				22A203602727A03E005D5151 /* Assets.xcassets in Resources */,
 				22A2035E2727A03D005D5151 /* Main.storyboard in Resources */,
 			);
@@ -432,7 +442,9 @@
 				20B4B49D27435CFD0022A54F /* RoomsViewController.swift in Sources */,
 				D524499327438915006118E9 /* TaskViewController.swift in Sources */,
 				22C3F1F4273630ED0018AB2F /* TaskFeedController.swift in Sources */,
+				22C707C127437D9200EFDECC /* TaskTableViewController.swift in Sources */,
 				22A203592727A03D005D5151 /* SceneDelegate.swift in Sources */,
+				22C707BF27437A0100EFDECC /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
