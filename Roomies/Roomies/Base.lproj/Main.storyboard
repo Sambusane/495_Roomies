@@ -100,56 +100,22 @@
             </objects>
             <point key="canvasLocation" x="143" y="-1357"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Rooms-->
         <scene sceneID="YD1-aQ-4kj">
             <objects>
-                <tableViewController id="qM4-GG-hpk" sceneMemberID="viewController">
+                <tableViewController id="qM4-GG-hpk" customClass="RoomsViewController" customModule="Roomies" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EM4-Y0-RMS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="194" id="biG-by-fOd" userLabel="RoomCell" customClass="RoomCell" customModule="Roomies" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="194"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="biG-by-fOd" userLabel="RoomCell" customClass="RoomCell" customModule="Roomies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="biG-by-fOd" id="Mlf-SV-Mu2">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Room Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT2-iF-LGQ">
-                                            <rect key="frame" x="20" y="19" width="98" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Room Owner:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m35-8Q-nlf">
-                                            <rect key="frame" x="20" y="77" width="104" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D72-fG-zGP">
-                                            <rect key="frame" x="126" y="19" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q76-cL-uy7">
-                                            <rect key="frame" x="132" y="77" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="roomNameLabel" destination="D72-fG-zGP" id="r5E-rc-Cg0"/>
-                                    <outlet property="roomOwnerLabel" destination="Q76-cL-uy7" id="i3t-Oh-GI8"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -157,7 +123,7 @@
                             <outlet property="delegate" destination="qM4-GG-hpk" id="5zJ-dt-FHy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="odl-Xb-ap6">
+                    <navigationItem key="navigationItem" title="Rooms" id="odl-Xb-ap6">
                         <barButtonItem key="rightBarButtonItem" title="Create Room" id="fgz-MA-3p7" customClass="createRoomButton">
                             <connections>
                                 <segue destination="Qz0-iB-BUJ" kind="presentation" identifier="createRoomSegue" id="M5s-M1-cIX"/>
@@ -167,7 +133,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qaj-Fa-k5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="869"/>
+            <point key="canvasLocation" x="792.75362318840587" y="868.52678571428567"/>
         </scene>
         <!--Create Room View Controller-->
         <scene sceneID="7RN-XT-YgT">
