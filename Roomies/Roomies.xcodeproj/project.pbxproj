@@ -21,6 +21,8 @@
 		22A2036E2727A03E005D5151 /* RoomiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2036D2727A03E005D5151 /* RoomiesTests.swift */; };
 		22A203792727A03E005D5151 /* RoomiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A203782727A03E005D5151 /* RoomiesUITests.swift */; };
 		22C3F1F4273630ED0018AB2F /* TaskFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3F1F3273630ED0018AB2F /* TaskFeedController.swift */; };
+		22C707BF27437A0100EFDECC /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C707BE27437A0100EFDECC /* CreateTaskViewController.swift */; };
+		22C707C127437D9200EFDECC /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C707C027437D9200EFDECC /* TaskTableViewController.swift */; };
 		3E8D7852EA7DE27A023400A0 /* Pods_Roomies_RoomiesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1405A4158A161F1FD980265D /* Pods_Roomies_RoomiesUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		22A203782727A03E005D5151 /* RoomiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomiesUITests.swift; sourceTree = "<group>"; };
 		22A2037A2727A03E005D5151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C3F1F3273630ED0018AB2F /* TaskFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFeedController.swift; sourceTree = "<group>"; };
+		22C707BE27437A0100EFDECC /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		22C707C027437D9200EFDECC /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		3276DA44B4415042E3E52353 /* Pods-Roomies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomies.debug.xcconfig"; path = "Target Support Files/Pods-Roomies/Pods-Roomies.debug.xcconfig"; sourceTree = "<group>"; };
 		5835C002E3B4313C821CF603 /* Pods-Roomies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomies.release.xcconfig"; path = "Target Support Files/Pods-Roomies/Pods-Roomies.release.xcconfig"; sourceTree = "<group>"; };
 		6D817364775FCF5688EA7947 /* Pods-Roomies-RoomiesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomies-RoomiesUITests.debug.xcconfig"; path = "Target Support Files/Pods-Roomies-RoomiesUITests/Pods-Roomies-RoomiesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 		22A2034A2727A03C005D5151 = {
 			isa = PBXGroup;
 			children = (
+				22C707C027437D9200EFDECC /* TaskTableViewController.swift */,
 				22A203552727A03D005D5151 /* Roomies */,
 				22A2036C2727A03E005D5151 /* RoomiesTests */,
 				22A203772727A03E005D5151 /* RoomiesUITests */,
@@ -141,6 +146,7 @@
 				22A203582727A03D005D5151 /* SceneDelegate.swift */,
 				22A2035A2727A03D005D5151 /* ViewController.swift */,
 				22A2035C2727A03D005D5151 /* Main.storyboard */,
+				22C707BE27437A0100EFDECC /* CreateTaskViewController.swift */,
 				22C3F1F3273630ED0018AB2F /* TaskFeedController.swift */,
 				22A2035F2727A03E005D5151 /* Assets.xcassets */,
 				22A203612727A03E005D5151 /* LaunchScreen.storyboard */,
@@ -424,7 +430,9 @@
 				20B4B4A1274361E10022A54F /* RoomCell.swift in Sources */,
 				20B4B49D27435CFD0022A54F /* RoomsViewController.swift in Sources */,
 				22C3F1F4273630ED0018AB2F /* TaskFeedController.swift in Sources */,
+				22C707C127437D9200EFDECC /* TaskTableViewController.swift in Sources */,
 				22A203592727A03D005D5151 /* SceneDelegate.swift in Sources */,
+				22C707BF27437A0100EFDECC /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qFB-H3-jm8">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="0MN-h4-hGA" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bxW-am-ssW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TXT-em-p11" kind="relationship" relationship="viewControllers" id="386-z0-4Ou"/>
+                        <segue destination="icy-JB-f89" kind="relationship" relationship="viewControllers" id="wyc-sk-tkA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4k-Bu-FKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="-609"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -75,12 +93,12 @@
                     <connections>
                         <outlet property="passwordField" destination="8Uu-Ur-h5e" id="eSb-lo-tPG"/>
                         <outlet property="usernameField" destination="UvT-wd-jhy" id="8Ok-4N-vfg"/>
-                        <segue destination="icy-JB-f89" kind="presentation" identifier="loginSegue" id="wGd-jD-FDn"/>
+                        <segue destination="0MN-h4-hGA" kind="presentation" identifier="loginSegue" id="Q03-49-roa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="138.61607142857142"/>
+            <point key="canvasLocation" x="143" y="-1357"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="YD1-aQ-4kj">
@@ -149,7 +167,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qaj-Fa-k5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1531.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="793" y="869"/>
         </scene>
         <!--Create Room View Controller-->
         <scene sceneID="7RN-XT-YgT">
@@ -193,10 +211,120 @@
             </objects>
             <point key="canvasLocation" x="1531.8840579710145" y="868.52678571428567"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tasks-->
+        <scene sceneID="YiT-hA-9CI">
+            <objects>
+                <tableViewController id="YjM-XQ-Nle" customClass="TaskTableViewController" customModule="Roomies" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AzQ-WX-JZB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="67" id="rp3-6q-iuU">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rp3-6q-iuU" id="d1D-kU-wy7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YjM-XQ-Nle" id="xlm-Xh-NIB"/>
+                            <outlet property="delegate" destination="YjM-XQ-Nle" id="ATo-Y8-GOX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tasks" id="l2e-RQ-Ju5">
+                        <barButtonItem key="rightBarButtonItem" title="Create Task" id="vvn-EL-2VZ">
+                            <connections>
+                                <segue destination="xOK-e3-EMF" kind="presentation" id="xfH-xB-SAZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Evs-tE-yok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239.13043478260872" y="868.52678571428567"/>
+        </scene>
+        <!--Create Task View Controller-->
+        <scene sceneID="vmL-Vk-ouN">
+            <objects>
+                <viewController id="xOK-e3-EMF" customClass="CreateTaskViewController" customModule="Roomies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H4W-xm-tcF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3h-ul-Fqw">
+                                <rect key="frame" x="65" y="124" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uvi-ke-PvL">
+                                <rect key="frame" x="65" y="153" width="289" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ut5-ou-g1c">
+                                <rect key="frame" x="65" y="208" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter description here...." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uf5-Lp-NyM">
+                                <rect key="frame" x="65" y="265" width="289" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvG-ZQ-RTq">
+                                <rect key="frame" x="167" y="453" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create Task"/>
+                                <connections>
+                                    <action selector="onCreateTask:" destination="xOK-e3-EMF" eventType="touchUpInside" id="hhj-I1-Ocd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k37-5V-Kap"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="Uf5-Lp-NyM" id="CUN-eb-D0K"/>
+                        <outlet property="taskNameField" destination="Uvi-ke-PvL" id="ehQ-Ty-Knu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42B-1y-bFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239.13043478260872" y="1587.7232142857142"/>
+        </scene>
+        <!--Task-->
+        <scene sceneID="MXe-fX-eJQ">
+            <objects>
+                <navigationController id="TXT-em-p11" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Task" id="gT9-h0-M52"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iL5-qz-gPp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YjM-XQ-Nle" kind="relationship" relationship="rootViewController" id="Kjs-h8-rfd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpU-Jz-bau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="139"/>
+        </scene>
+        <!--Rooms-->
         <scene sceneID="XXd-p6-CNd">
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="icy-JB-f89" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rooms" id="cp7-5U-2ek"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NrN-II-SiH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -211,6 +339,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
