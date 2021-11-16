@@ -25,6 +25,8 @@
 		22C707BF27437A0100EFDECC /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C707BE27437A0100EFDECC /* CreateTaskViewController.swift */; };
 		22C707C127437D9200EFDECC /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C707C027437D9200EFDECC /* TaskTableViewController.swift */; };
 		3E8D7852EA7DE27A023400A0 /* Pods_Roomies_RoomiesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1405A4158A161F1FD980265D /* Pods_Roomies_RoomiesUITests.framework */; };
+		D524499327438915006118E9 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D524499227438915006118E9 /* TaskViewController.swift */; };
+		D5244995274395FF006118E9 /* listTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5244994274395FF006118E9 /* listTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		7DAED24CA8ABA61177EE579B /* Pods_RoomiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D109DC1058B74161D46C4A /* Pods_Roomies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D099ED461EE7FF078B47B8A5 /* Pods-RoomiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomiesTests.release.xcconfig"; path = "Target Support Files/Pods-RoomiesTests/Pods-RoomiesTests.release.xcconfig"; sourceTree = "<group>"; };
+		D524499227438915006118E9 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		D5244994274395FF006118E9 /* listTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				20B4B49C27435CFD0022A54F /* RoomsViewController.swift */,
 				20B4B49E27435E250022A54F /* CreateRoomViewController.swift */,
 				20B4B4A0274361E10022A54F /* RoomCell.swift */,
+				D524499227438915006118E9 /* TaskViewController.swift */,
+				D5244994274395FF006118E9 /* listTableViewCell.swift */,
 			);
 			path = Roomies;
 			sourceTree = "<group>";
@@ -428,11 +434,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5244995274395FF006118E9 /* listTableViewCell.swift in Sources */,
 				22A2035B2727A03D005D5151 /* ViewController.swift in Sources */,
 				20B4B49F27435E250022A54F /* CreateRoomViewController.swift in Sources */,
 				22A203572727A03D005D5151 /* AppDelegate.swift in Sources */,
 				20B4B4A1274361E10022A54F /* RoomCell.swift in Sources */,
 				20B4B49D27435CFD0022A54F /* RoomsViewController.swift in Sources */,
+				D524499327438915006118E9 /* TaskViewController.swift in Sources */,
 				22C3F1F4273630ED0018AB2F /* TaskFeedController.swift in Sources */,
 				22C707C127437D9200EFDECC /* TaskTableViewController.swift in Sources */,
 				22A203592727A03D005D5151 /* SceneDelegate.swift in Sources */,
