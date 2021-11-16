@@ -12,6 +12,7 @@
 		20B4B49D27435CFD0022A54F /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4B49C27435CFD0022A54F /* RoomsViewController.swift */; };
 		20B4B49F27435E250022A54F /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4B49E27435E250022A54F /* CreateRoomViewController.swift */; };
 		20B4B4A1274361E10022A54F /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4B4A0274361E10022A54F /* RoomCell.swift */; };
+		22045EF7274393CC00765D12 /* Milestone2Roomies.gif in Resources */ = {isa = PBXBuildFile; fileRef = 22045EF6274393CB00765D12 /* Milestone2Roomies.gif */; };
 		22A203572727A03D005D5151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A203562727A03D005D5151 /* AppDelegate.swift */; };
 		22A203592727A03D005D5151 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A203582727A03D005D5151 /* SceneDelegate.swift */; };
 		22A2035B2727A03D005D5151 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2035A2727A03D005D5151 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		20B4B49C27435CFD0022A54F /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		20B4B49E27435E250022A54F /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		20B4B4A0274361E10022A54F /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		22045EF6274393CB00765D12 /* Milestone2Roomies.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Milestone2Roomies.gif; sourceTree = "<group>"; };
 		22A203532727A03D005D5151 /* Roomies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A203562727A03D005D5151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22A203582727A03D005D5151 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		22A203552727A03D005D5151 /* Roomies */ = {
 			isa = PBXGroup;
 			children = (
+				22045EF6274393CB00765D12 /* Milestone2Roomies.gif */,
 				22A203562727A03D005D5151 /* AppDelegate.swift */,
 				22A203582727A03D005D5151 /* SceneDelegate.swift */,
 				22A2035A2727A03D005D5151 /* ViewController.swift */,
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A203632727A03E005D5151 /* LaunchScreen.storyboard in Resources */,
+				22045EF7274393CC00765D12 /* Milestone2Roomies.gif in Resources */,
 				22A203602727A03E005D5151 /* Assets.xcassets in Resources */,
 				22A2035E2727A03D005D5151 /* Main.storyboard in Resources */,
 			);
