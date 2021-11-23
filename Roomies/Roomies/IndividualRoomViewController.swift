@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class RoomsViewController: UITableViewController {
+class IndividualRoomViewController: UITableViewController {
     var rooms = [PFObject]()
 
     override func viewDidLoad() {
@@ -23,13 +23,10 @@ class RoomsViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "individualRoomSegue", sender: nil)
-    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let query = PFQuery(className: "Posts")
-        query.whereKey("author", equalTo: PFUser.current()!)
+        let query = PFQuery(className: "Tasks")
+        query.whereKey("room", equalTo: PFUser.current()!)
         query.findObjectsInBackground { tasks, Error in
             if tasks != nil {
                 self.rooms = tasks!
@@ -75,7 +72,7 @@ class RoomsViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
