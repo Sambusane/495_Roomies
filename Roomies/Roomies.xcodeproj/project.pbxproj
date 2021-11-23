@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A600E2C71A467C20C0337C9 /* Pods_RoomiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAED24CA8ABA61177EE579B /* Pods_RoomiesTests.framework */; };
 		0E9B1257676FD131E584FC93 /* Pods_Roomies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D109DC1058B74161D46C4A /* Pods_Roomies.framework */; };
+		206ED602274C9B150029BF34 /* IndividualRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206ED601274C9B150029BF34 /* IndividualRoomViewController.swift */; };
+		206ED608274CAF0E0029BF34 /* IndividualRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206ED607274CAF0E0029BF34 /* IndividualRoomCell.swift */; };
 		20B4B49D27435CFD0022A54F /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4B49C27435CFD0022A54F /* RoomsViewController.swift */; };
 		20B4B49F27435E250022A54F /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4B49E27435E250022A54F /* CreateRoomViewController.swift */; };
 		20B4B4A1274361E10022A54F /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4B4A0274361E10022A54F /* RoomCell.swift */; };
@@ -50,6 +52,8 @@
 		06FDCDD8FE2AD545A471CD5F /* Pods-Roomies-RoomiesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomies-RoomiesUITests.release.xcconfig"; path = "Target Support Files/Pods-Roomies-RoomiesUITests/Pods-Roomies-RoomiesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1405A4158A161F1FD980265D /* Pods_Roomies_RoomiesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomies_RoomiesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B10B355DA416D500E8A25D2 /* Pods-RoomiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomiesTests.debug.xcconfig"; path = "Target Support Files/Pods-RoomiesTests/Pods-RoomiesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		206ED601274C9B150029BF34 /* IndividualRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualRoomViewController.swift; sourceTree = "<group>"; };
+		206ED607274CAF0E0029BF34 /* IndividualRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualRoomCell.swift; sourceTree = "<group>"; };
 		20B4B49C27435CFD0022A54F /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		20B4B49E27435E250022A54F /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		20B4B4A0274361E10022A54F /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				20B4B4A0274361E10022A54F /* RoomCell.swift */,
 				D524499227438915006118E9 /* TaskViewController.swift */,
 				D5244994274395FF006118E9 /* listTableViewCell.swift */,
+				206ED601274C9B150029BF34 /* IndividualRoomViewController.swift */,
+				206ED607274CAF0E0029BF34 /* IndividualRoomCell.swift */,
 			);
 			path = Roomies;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			files = (
 				D5244995274395FF006118E9 /* listTableViewCell.swift in Sources */,
 				22A2035B2727A03D005D5151 /* ViewController.swift in Sources */,
+				206ED602274C9B150029BF34 /* IndividualRoomViewController.swift in Sources */,
 				20B4B49F27435E250022A54F /* CreateRoomViewController.swift in Sources */,
 				22A203572727A03D005D5151 /* AppDelegate.swift in Sources */,
 				20B4B4A1274361E10022A54F /* RoomCell.swift in Sources */,
@@ -444,6 +451,7 @@
 				22C3F1F4273630ED0018AB2F /* TaskFeedController.swift in Sources */,
 				22C707C127437D9200EFDECC /* TaskTableViewController.swift in Sources */,
 				22A203592727A03D005D5151 /* SceneDelegate.swift in Sources */,
+				206ED608274CAF0E0029BF34 /* IndividualRoomCell.swift in Sources */,
 				22C707BF27437A0100EFDECC /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

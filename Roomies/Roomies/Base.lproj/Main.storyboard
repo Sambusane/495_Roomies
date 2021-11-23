@@ -109,13 +109,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="biG-by-fOd" userLabel="RoomCell" customClass="RoomCell" customModule="Roomies" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomCell" rowHeight="164" id="biG-by-fOd" userLabel="RoomCell" customClass="RoomCell" customModule="Roomies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="biG-by-fOd" id="Mlf-SV-Mu2">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="FVr-fc-vWi" kind="show" identifier="individualRoomSegue" id="TBr-dA-RMj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -124,7 +127,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Rooms" id="odl-Xb-ap6">
-                        <barButtonItem key="rightBarButtonItem" title="Create Room" id="fgz-MA-3p7" customClass="createRoomButton">
+                        <barButtonItem key="rightBarButtonItem" title="Create Room" id="fgz-MA-3p7">
                             <connections>
                                 <segue destination="Qz0-iB-BUJ" kind="presentation" identifier="createRoomSegue" id="M5s-M1-cIX"/>
                             </connections>
@@ -133,7 +136,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qaj-Fa-k5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="868.52678571428567"/>
+            <point key="canvasLocation" x="793" y="869"/>
         </scene>
         <!--Create Room View Controller-->
         <scene sceneID="7RN-XT-YgT">
@@ -169,6 +172,7 @@
                         <viewLayoutGuide key="safeArea" id="Rjz-3c-6ux"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8sz-Qx-th9"/>
                     <connections>
                         <outlet property="roomNameField" destination="9IC-g1-Lcc" id="0za-8P-KRK"/>
                     </connections>
@@ -269,6 +273,61 @@
             </objects>
             <point key="canvasLocation" x="-239.13043478260872" y="1587.7232142857142"/>
         </scene>
+        <!--Individual Room View Controller-->
+        <scene sceneID="lSr-I0-mAW">
+            <objects>
+                <tableViewController id="FVr-fc-vWi" customClass="IndividualRoomViewController" customModule="Roomies" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fRV-Zw-Leh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="taskCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="153" id="T1w-BC-50D" customClass="IndividualRoomCell" customModule="Roomies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="153"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="indTaskCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T1w-BC-50D" id="USj-hN-xyC" customClass="indTaskCell">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shd-bk-5nx" customClass="I">
+                                            <rect key="frame" x="20" y="23" width="84" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPq-1w-58Y">
+                                            <rect key="frame" x="20" y="52" width="374" height="75"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="taskDescriptionLabel" destination="fPq-1w-58Y" id="Kkt-FU-Jxe"/>
+                                    <outlet property="taskNameLabel" destination="Shd-bk-5nx" id="0Dh-F8-xgc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FVr-fc-vWi" id="uOv-m8-EZl"/>
+                            <outlet property="delegate" destination="FVr-fc-vWi" id="31d-wJ-O2Q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bsC-vS-Ce7">
+                        <barButtonItem key="rightBarButtonItem" title="Create Task" id="UkC-qE-7B6">
+                            <connections>
+                                <segue destination="xOK-e3-EMF" kind="presentation" id="5dF-f2-hkn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1j1-lT-6gF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.75362318840587" y="1587.7232142857142"/>
+        </scene>
         <!--Task-->
         <scene sceneID="MXe-fX-eJQ">
             <objects>
@@ -304,6 +363,9 @@
             <point key="canvasLocation" x="794" y="139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5dF-f2-hkn"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
