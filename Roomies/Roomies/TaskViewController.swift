@@ -7,7 +7,17 @@
 
 import UIKit
 
-class TaskViewController: UIViewController {
+class TaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return array.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell") as? listTableViewCell
+        cell?.cellLabel.text = array[indexPath.row]
+        return cell!
+    }
+    
     
     
     @IBOutlet weak var listtbl : UITableView!
@@ -16,24 +26,12 @@ class TaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.listtbl.delegate =self
-        self.listtbl.dataSource =self
+        self.listtbl.delegate = self
+        self.listtbl.dataSource = self
         // Do any additional setup after loading the view.
     }
     
-extension ViewController : UITableViewDelegate , UITableViewDataSource {
-    
-    func tableView( tableView: UITableView, numberOfRowsInSection
-                    section: Int) -> Int {
-        return array.count
-    }
-    func tableView( tableView: UITableView, numberOfRowsInSection
-                    section: Int) -> Int {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell") as? listTableViewCell
-        cell?.cellLabel.text = array[indexPath.row]
-        return cell
-    }
-}
+
     /*
     // MARK: - Navigation
 

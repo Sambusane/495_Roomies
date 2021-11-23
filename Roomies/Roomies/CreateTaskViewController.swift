@@ -24,6 +24,8 @@ class CreateTaskViewController: UIViewController {
           (success: Bool, error: Error?) in
           if (success) {
             // The object has been saved.
+            self.dismiss(animated: true, completion: nil)
+            print("Task saved!")
           } else {
             // There was a problem, check error.description
             print(error?.localizedDescription as Any)
