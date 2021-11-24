@@ -10,6 +10,7 @@ import Parse
 
 class RoomsViewController: UITableViewController {
     var rooms = [PFObject]()
+    var room = PFObject.init(className: "Posts")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +24,21 @@ class RoomsViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "individualRoomSegue", sender: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let detaolsViewController = segue.destination as! IndividualRoomViewController
+        detaolsViewController.roomPass = room
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        room = rooms[indexPath.row]
+        self.performSegue(withIdentifier: "individualRoomSegue", sender: tableView.dequeueReusableCell(withIdentifier: "cell")
+                          
+)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let query = PFQuery(className: "Posts")
@@ -94,14 +107,11 @@ class RoomsViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+
 
 }

@@ -316,13 +316,22 @@
                             <outlet property="delegate" destination="FVr-fc-vWi" id="31d-wJ-O2Q"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="bsC-vS-Ce7">
-                        <barButtonItem key="rightBarButtonItem" title="Create Task" id="UkC-qE-7B6">
-                            <connections>
-                                <segue destination="xOK-e3-EMF" kind="presentation" id="5dF-f2-hkn"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Create Task" id="UkC-qE-7B6">
+                                <connections>
+                                    <segue destination="xOK-e3-EMF" kind="presentation" id="5dF-f2-hkn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Add Users" id="ajn-VN-7ed">
+                                <connections>
+                                    <segue destination="JfF-jL-Jda" kind="presentation" id="H8S-ga-Mzq"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1j1-lT-6gF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -361,6 +370,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bM8-xL-5NX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="794" y="139"/>
+        </scene>
+        <!--Add User View Controller-->
+        <scene sceneID="u4r-Y7-7Hp">
+            <objects>
+                <viewController id="JfF-jL-Jda" customClass="AddUserViewController" customModule="Roomies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6W-mm-fqs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5i-Y1-WDd">
+                                <rect key="frame" x="168" y="156" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-b4-pck">
+                                <rect key="frame" x="102" y="217" width="212" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4F-tN-PcK">
+                                <rect key="frame" x="176" y="291" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add User"/>
+                                <connections>
+                                    <action selector="addUserSubmit:" destination="JfF-jL-Jda" eventType="touchUpInside" id="QTb-MY-h5j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a2h-b5-AZf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="usernameTextField" destination="Kkc-b4-pck" id="cwY-JW-rAg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBy-Cd-7bm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531.8840579710145" y="1587.7232142857142"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
