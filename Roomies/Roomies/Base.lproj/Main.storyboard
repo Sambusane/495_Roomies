@@ -336,13 +336,22 @@
                             <outlet property="delegate" destination="FVr-fc-vWi" id="31d-wJ-O2Q"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="bsC-vS-Ce7">
-                        <barButtonItem key="rightBarButtonItem" title="Create Task" id="UkC-qE-7B6">
-                            <connections>
-                                <segue destination="xOK-e3-EMF" kind="presentation" id="5dF-f2-hkn"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Create Task" id="UkC-qE-7B6">
+                                <connections>
+                                    <segue destination="xOK-e3-EMF" kind="presentation" id="5dF-f2-hkn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Add Users" id="ajn-VN-7ed">
+                                <connections>
+                                    <segue destination="JfF-jL-Jda" kind="presentation" id="H8S-ga-Mzq"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1j1-lT-6gF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,8 +391,6 @@
             </objects>
             <point key="canvasLocation" x="794" y="139"/>
         </scene>
-<<<<<<< Updated upstream
-=======
         <!--Add User View Controller-->
         <scene sceneID="u4r-Y7-7Hp">
             <objects>
@@ -415,7 +422,9 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a2h-b5-AZf"/>
+
                         <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+
                     </view>
                     <connections>
                         <outlet property="usernameTextField" destination="Kkc-b4-pck" id="cwY-JW-rAg"/>
@@ -425,7 +434,6 @@
             </objects>
             <point key="canvasLocation" x="1531.8840579710145" y="1587.7232142857142"/>
         </scene>
->>>>>>> Stashed changes
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xfH-xB-SAZ"/>

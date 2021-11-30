@@ -28,10 +28,10 @@ Allows users to create Rooms with their house/roommates to assign and keep track
 **Required Must-have Stories**
 
 * Users can create an account
-    * ![](https://i.imgur.com/9ccHAqp.gif)
+    * <img src='https://i.imgur.com/9ccHAqp.gif' title='Video Walkthrough' width='150' alt ='Video Walkthrough' />
 
 * Users can login
-    * ![](https://i.imgur.com/Z0uyhBU.gif)
+    * <img src='https://i.imgur.com/Z0uyhBU.gif' title='Video Walkthrough' width='150' alt ='Video Walkthrough' />
 
 * Users can see a list of all tasks assigned to them
 * Users can see a list of rooms they are in
@@ -39,7 +39,9 @@ Allows users to create Rooms with their house/roommates to assign and keep track
    * Previous 3 stories in this gif 
 	<img src='https://github.com/Sambusane/495_Roomies/blob/main/Roomies/Roomies/Milestone2Roomies.gif?raw=true' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 * Users can add other users to the room
+	<img src='https://github.com/Sambusane/495_Roomies/blob/main/Roomies/Roomies/addUsers.gif' title='Video Walkthrough' width='' alt ='Video Walkthrough' />
 * Users can create tasks in the room
+	<img src='https://i.imgur.com/4GFDjDM.gif' title='Video Walkthrough' width='150' alt ='Video Walkthrough' />
 * Users can assign tasks in the room
 * Users can mark a task complete
 
