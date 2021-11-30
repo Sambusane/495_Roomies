@@ -8,6 +8,7 @@ target 'Roomies' do
   # Pods for Roomies
   pod 'Parse'
   pod 'AlamofireImage'
+  pod 'iOSDropDown'
   target 'RoomiesTests' do
     inherit! :search_paths
     # Pods for testing

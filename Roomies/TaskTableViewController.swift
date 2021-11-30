@@ -52,7 +52,7 @@ class TaskTableViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let task = tasks[indexPath.row]
         cell.textLabel?.text = task["name"] as! String
-        // Configure the cell...
+        // Configure the cell...        // Configure the cell...
 
         return cell
     }

@@ -11,8 +11,12 @@ import Parse
 class IndividualRoomViewController: UITableViewController {
     var rooms = [PFObject]()
     var roomPass = PFObject.init(className: "Posts")
-    
+    var tasks = [PFObject]()
 
+
+    @IBAction func taskAdd(_ sender: Any) {
+        self.performSegue(withIdentifier: "roomTaskSegue", sender: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -28,10 +32,10 @@ class IndividualRoomViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let query = PFQuery(className: "Tasks")
-        query.whereKey("room", equalTo: PFUser.current()!)
+        query.whereKey("roomID",equalTo: roomPass)
         query.findObjectsInBackground { tasks, Error in
             if tasks != nil {
-                self.rooms = tasks!
+                self.tasks = tasks!
                 self.tableView.reloadData()
             }
         }
@@ -44,13 +48,13 @@ class IndividualRoomViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return rooms.count
+        return tasks.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let room = rooms[indexPath.row]
+        let room = tasks[indexPath.row]
         cell.textLabel?.text = room["name"] as! String
 
         // Configure the cell...
@@ -102,9 +106,20 @@ class IndividualRoomViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
+        if segue.identifier == "roomTaskSegue" {
+            let taskRoomControllrt = segue.destination as! RoomTaskViewController
+            taskRoomControllrt.roomPass = roomPass
+            
+            
+        }else {
+            let roomDetaiViewCOntroller = segue.destination as! AddUserViewController
+            roomDetaiViewCOntroller.room = roomPass
+            
+        }
         
-        let roomDetaiViewCOntroller = segue.destination as! AddUserViewController
-        roomDetaiViewCOntroller.room = roomPass
+        
+        
+        
         
     }
 
