@@ -144,6 +144,7 @@
                     <navigationItem key="navigationItem" title="Rooms" id="odl-Xb-ap6">
                         <barButtonItem key="rightBarButtonItem" title="Create Room" id="fgz-MA-3p7">
                             <connections>
+                                <action selector="createRoomButton:" destination="qM4-GG-hpk" id="hT4-Lw-XHe"/>
                                 <segue destination="Qz0-iB-BUJ" kind="presentation" identifier="createRoomSegue" id="M5s-M1-cIX"/>
                             </connections>
                         </barButtonItem>
@@ -341,7 +342,8 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Create Task" id="UkC-qE-7B6">
                                 <connections>
-                                    <segue destination="xOK-e3-EMF" kind="presentation" id="5dF-f2-hkn"/>
+                                    <action selector="taskAdd:" destination="FVr-fc-vWi" id="hdE-C0-lef"/>
+                                    <segue destination="sx9-Zx-Nr5" kind="presentation" identifier="roomTaskSegue" id="KD1-sh-dSh"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Add Users" id="ajn-VN-7ed">
@@ -422,9 +424,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a2h-b5-AZf"/>
-
                         <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
-
                     </view>
                     <connections>
                         <outlet property="usernameTextField" destination="Kkc-b4-pck" id="cwY-JW-rAg"/>
@@ -434,10 +434,78 @@
             </objects>
             <point key="canvasLocation" x="1531.8840579710145" y="1587.7232142857142"/>
         </scene>
+        <!--Room Task View Controller-->
+        <scene sceneID="JJv-6a-GxW">
+            <objects>
+                <viewController id="sx9-Zx-Nr5" customClass="RoomTaskViewController" customModule="Roomies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ckg-TY-qqf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AW0-3X-CO0">
+                                <rect key="frame" x="75" y="135" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdy-85-R0z">
+                                <rect key="frame" x="75" y="257" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mr2-bc-Lr7">
+                                <rect key="frame" x="75" y="180" width="245" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter Description....." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="40A-pf-Omi">
+                                <rect key="frame" x="75" y="298" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymD-H9-8oL">
+                                <rect key="frame" x="75" y="528" width="245" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4n-TT-eH8">
+                                <rect key="frame" x="75" y="479" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfK-d0-tcx">
+                                <rect key="frame" x="167" y="646" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create Task"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="sx9-Zx-Nr5" eventType="touchUpInside" id="8qA-HZ-ZHJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B6n-uy-tTJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="UsernameField" destination="ymD-H9-8oL" id="QZj-32-AzD"/>
+                        <outlet property="descriptionField" destination="40A-pf-Omi" id="GhY-On-KyM"/>
+                        <outlet property="taskField" destination="mr2-bc-Lr7" id="6Re-4l-TiS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7w-yW-8g0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.75362318840587" y="2282.8125"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="xfH-xB-SAZ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
         <namedColor name="AccentColor">

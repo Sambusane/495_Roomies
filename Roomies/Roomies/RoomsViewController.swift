@@ -12,6 +12,10 @@ class RoomsViewController: UITableViewController {
     var rooms = [PFObject]()
     var room = PFObject.init(className: "Posts")
 
+    @IBAction func createRoomButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "createRoomSegue", sender: nil)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -25,9 +29,11 @@ class RoomsViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let detaolsViewController = segue.destination as! IndividualRoomViewController
-        detaolsViewController.roomPass = room
+        if segue.identifier == "individualRoomSegue" {
+            let detaolsViewController = segue.destination as! IndividualRoomViewController
+            detaolsViewController.roomPass = room
+        }
+       
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
