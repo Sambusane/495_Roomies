@@ -47,14 +47,27 @@ class RoomsViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let query = PFQuery(className: "Posts")
-        query.whereKey("author", equalTo: PFUser.current()!)
-        query.findObjectsInBackground { tasks, Error in
-            if tasks != nil {
-                self.rooms = tasks!
-                self.tableView.reloadData()
+        if PFUser.current()?["rooms"] != nil {
+            let coolRooms = PFUser.current()?["rooms"] as! [String:PFObject]
+            let coolerRomms = Array(coolRooms.values)
+            var roomInstance = [PFObject]()
+            coolerRomms.forEach { indiRoom in
+                let query = PFQuery(className: "Posts")
+                query.whereKey("objectId",equalTo: indiRoom.objectId)
+                query.findObjectsInBackground { tasks, Error in
+                    if tasks != nil {
+                        roomInstance.append((tasks?[0])!  as PFObject)
+                    }
+                    self.rooms = roomInstance
+                    self.tableView.reloadData()
+                }
+                
             }
+            
         }
+        
+        
+
         
         
     }
