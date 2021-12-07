@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="qFB-H3-jm8">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="0MN-h4-hGA" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="FeedRoomTabs" modalPresentationStyle="fullScreen" id="0MN-h4-hGA" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bxW-am-ssW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -30,7 +30,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Roomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginScreenController" id="BYZ-38-t0r" customClass="ViewController" customModule="Roomies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,6 +225,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tasks" id="l2e-RQ-Ju5">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="XzZ-OO-F10">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="YjM-XQ-Nle" id="iiS-fh-c3Y"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Create Task" id="vvn-EL-2VZ">
                             <connections>
                                 <segue destination="xOK-e3-EMF" kind="presentation" id="xfH-xB-SAZ"/>

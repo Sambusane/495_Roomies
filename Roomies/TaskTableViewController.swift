@@ -13,6 +13,14 @@ class TaskTableViewController: UITableViewController{
     
     var tasks = [PFObject]()
     
+    @IBAction func onLogoutButton(_ sender: Any) {
+        PFUser.logOut()
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginScreenController = main.instantiateViewController(identifier: "loginScreenController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else {return}
+        
+        delegate.window?.rootViewController = loginScreenController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
