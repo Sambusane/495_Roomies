@@ -18,6 +18,7 @@
 		22045EF9274CBDE400765D12 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22045EF8274CBDE400765D12 /* AddUserViewController.swift */; };
 		224F22AA2755EAC50034F1BC /* RoomTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F22A92755EAC50034F1BC /* RoomTaskViewController.swift */; };
 		224F22AC27560A050034F1BC /* addtasksRoom.gif in Resources */ = {isa = PBXBuildFile; fileRef = 224F22AB27560A050034F1BC /* addtasksRoom.gif */; };
+		224F22AF275F133A0034F1BC /* TaskCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F22AE275F133A0034F1BC /* TaskCompleteViewController.swift */; };
 		22A203572727A03D005D5151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A203562727A03D005D5151 /* AppDelegate.swift */; };
 		22A203592727A03D005D5151 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A203582727A03D005D5151 /* SceneDelegate.swift */; };
 		22A2035B2727A03D005D5151 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2035A2727A03D005D5151 /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 		22045EF8274CBDE400765D12 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		224F22A92755EAC50034F1BC /* RoomTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTaskViewController.swift; sourceTree = "<group>"; };
 		224F22AB27560A050034F1BC /* addtasksRoom.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = addtasksRoom.gif; sourceTree = "<group>"; };
+		224F22AE275F133A0034F1BC /* TaskCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompleteViewController.swift; sourceTree = "<group>"; };
 		22A203532727A03D005D5151 /* Roomies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A203562727A03D005D5151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22A203582727A03D005D5151 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				D5244994274395FF006118E9 /* listTableViewCell.swift */,
 				206ED601274C9B150029BF34 /* IndividualRoomViewController.swift */,
 				206ED607274CAF0E0029BF34 /* IndividualRoomCell.swift */,
+				224F22AE275F133A0034F1BC /* TaskCompleteViewController.swift */,
 			);
 			path = Roomies;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				224F22AA2755EAC50034F1BC /* RoomTaskViewController.swift in Sources */,
 				22C707C127437D9200EFDECC /* TaskTableViewController.swift in Sources */,
 				22A203592727A03D005D5151 /* SceneDelegate.swift in Sources */,
+				224F22AF275F133A0034F1BC /* TaskCompleteViewController.swift in Sources */,
 				22045EF9274CBDE400765D12 /* AddUserViewController.swift in Sources */,
 				206ED608274CAF0E0029BF34 /* IndividualRoomCell.swift in Sources */,
 				22C707BF27437A0100EFDECC /* CreateTaskViewController.swift in Sources */,

@@ -12,7 +12,16 @@ class TaskTableViewController: UITableViewController{
 
     
     var tasks = [PFObject]()
+    var task = PFObject.init(className: "Tasks")
     
+    @IBAction func onLogoutButton(_ sender: Any) {
+        PFUser.logOut()
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginScreenController = main.instantiateViewController(identifier: "loginScreenController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else {return}
+        
+        delegate.window?.rootViewController = loginScreenController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +65,21 @@ class TaskTableViewController: UITableViewController{
 
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        task = tasks[indexPath.row]
+        self.performSegue(withIdentifier: "taskCompleteSegue", sender: tableView.dequeueReusableCell(withIdentifier: "cell")
+                          
+)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "taskCompleteSegue" {
+            let detaolsViewController = segue.destination as! TaskCompleteViewController
+            detaolsViewController.task = task
+        }
+       
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
 
     /*
     // Override to support conditional editing of the table view.

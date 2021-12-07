@@ -21,8 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://parseapi.back4app.com"
         }
         Parse.initialize(with: configuration)
+        
         return true
     }
+
 
     // MARK: UISceneSession Lifecycle
 
